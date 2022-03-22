@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/bootstrap/css/bootstrap.css"/>
+    </environment>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light p-3">
+            <a class="navbar-brand" href="#">Navbar</a>
+        </nav>
+    </header>
+    <aside style="display:flex;">
+        <nav class="sidebar" style="flex:1;">
+            <div><partial name="Admin/_SideMenu"/></div>
+            
+        </nav>
+        <section style="flex:3;">
+        @RenderBody()
+    </section>
+    </aside>
+    
+
+    <div>
+        
+    </div>
+<environment include="Development">
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+</environment>
+</body>
+</html>

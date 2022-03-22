@@ -1,0 +1,32 @@
+﻿@model DomainLayer.ProductLayer.ProductCamFeatures
+
+<h4>ProductCamFeatures</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="_CamFeatures">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="primaryCam" class="control-label"></label>
+                <input asp-for="primaryCam" class="form-control" />
+                <span asp-validation-for="primaryCam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="secondaryCam" class="control-label"></label>
+                <input asp-for="secondaryCam" class="form-control" />
+                <span asp-validation-for="secondaryCam" class="text-danger"></span>
+            </div>
+            <div class="form-group p-3">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="">View LIst</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

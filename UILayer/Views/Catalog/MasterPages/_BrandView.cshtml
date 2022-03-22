@@ -1,0 +1,27 @@
+﻿@model DomainLayer.ProductLayer.ProductBrand
+
+<h4>ProductBrand</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Catalog" asp-action="_BrandView" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group p-3">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="">View LIst</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
